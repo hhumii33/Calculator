@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div id="calculator">
+      <input type="text" readonly id="display" align-item="center"><br>
+      <div class="buttonContainer">
+        <button class="icon" id="clear" onclick="currentDisplay=''; document.querySelector('#display').value= currentDisplay;">AC</button>
+        
+        <button class="icon" id="backspace" onclick="currentDisplay = currentDisplay.slice(0, -1); document.querySelector('#display').value = currentDisplay;"
+          <img src="images/backspace.png">
+        </button>
+            
+        <button class="icon" id="closing_bracket" onclick="currentDisplay= currentDisplay+')'; document.querySelector('#display').value= currentDisplay;">)</button>
+        
+        <button class="icon" id="divide" onclick="currentDisplay= currentDisplay+'/'; document.querySelector('#display').value= currentDisplay;">÷</button><br>
+        
+        <button class="button" id="seven" onclick="currentDisplay= currentDisplay+'7'; document.querySelector('#display').value= currentDisplay;">7</button>
+        
+        <button class="button" id="eight" onclick="currentDisplay=currentDisplay+'8'; document.querySelector('#display').value= currentDisplay;">8</button>
+        
+        <button class="button" id="nine" onclick="currentDisplay= currentDisplay+'9'; document.querySelector('#display').value=currentDisplay;">9</button>
+        
+        <button class="icon" id="multiplication" onclick="currentDisplay= currentDisplay+'*'; document.querySelector('#display').value= currentDisplay;">×</button><br>
+        
+        <button class="button" id="four" onclick="currentDisplay= currentDisplay+'4'; document.querySelector('#display').value= currentDisplay;">4</button>
+        
+        <button class="button" id="five" onclick="currentDisplay= currentDisplay+'5'; document.querySelector('#display').value= currentDisplay;">5</button>
+        
+        <button class="button" id="six" onclick="currentDisplay= currentDisplay+'6'; document.querySelector('#display').value= currentDisplay;">6</button>
+        
+        <button class="icon" id="minus" onclick="currentDisplay= currentDisplay+'-'; document.querySelector('#display').value= currentDisplay;">-</button><br>
+        
+        <button class="button" id="one" onclick="currentDisplay= currentDisplay+'1'; document.querySelector('#display').value= currentDisplay;">1</button>
+        
+        <button class="button" id="two" onclick="currentDisplay= currentDisplay+'2'; document.querySelector('#display').value= currentDisplay;">2</button>
+        
+        <button class="button" id="three" onclick="currentDisplay= currentDisplay+'3'; document.querySelector('#display').value= currentDisplay;">3</button>
+        
+        <button class="icon" id="plus" onclick="currentDisplay= currentDisplay+'+'; document.querySelector('#display').value= currentDisplay;">+</button><br>
+        
+        <button class="icon" id="point" onclick="currentDisplay= currentDisplay+'.'; document.querySelector('#display').value= currentDisplay;">.</button>
+        
+        <button class="button" id="zero" onclick="currentDisplay= currentDisplay+'0'; document.querySelector('#display').value= currentDisplay;">0</button>
+        
+        <button class="icon" id="opening_bracket" onclick="currentDisplay= currentDisplay+'('; document.querySelector('#display').value= currentDisplay;">(</button>  
+        
+        <!-- re doing the "equal to button" to add more functionality-->
+        <button class="icon" id="equal" onclick="calculateResult()"> <img src="images/equal.png"></button>
+
+        <!-- how i previously added the "equal to" calculation 
+        <button class="icon" id="equal" onclick="currentDisplay= eval(currentDisplay); document.querySelector('#display').value= currentDisplay;">
+          <img src="images/equal.png">
+        </button><br>-->
+      </div>
+    </div>
+  </main>
+  <script>
+    let currentDisplay='';
+    document.querySelector('#display').value= currentDisplay;
+    
+    
+    
+  </script>
+</body>
+
+</html>
